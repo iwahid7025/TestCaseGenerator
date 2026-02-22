@@ -64,5 +64,12 @@ coverage/
 *.coverage
 TestResults/
 
-# Dependencies (if using Node.js for frontend)
+# Node.js / Frontend
 node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Frontend build outputs
+frontend/dist/
+frontend/build/
