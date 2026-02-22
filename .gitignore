@@ -1,17 +1,52 @@
-# Dependencies
-node_modules/
-vendor/
+## .NET / C# ignores
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-
-# Build outputs
-dist/
-build/
-out/
-*.log
+appsettings.*.json
+!appsettings.Development.json
 
 # IDE/Editor files
 .vscode/
@@ -27,9 +62,7 @@ Thumbs.db
 # Test coverage
 coverage/
 *.coverage
+TestResults/
 
-# Cache
-.cache/
-.pytest_cache/
-__pycache__/
-*.pyc
+# Dependencies (if using Node.js for frontend)
+node_modules/
