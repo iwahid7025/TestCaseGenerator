@@ -1,7 +1,13 @@
+using Backend.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Controllers
 builder.Services.AddControllers();
+
+// Register our services
+builder.Services.AddSingleton<OpenAIService>();
+builder.Services.AddScoped<TestCaseService>();
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -16,7 +22,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add Swagger for API testing
+// Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
